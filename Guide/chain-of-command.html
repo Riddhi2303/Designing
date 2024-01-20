@@ -56,6 +56,10 @@
       .analyticscontent {
         display: none;
       }
+      .rotated {
+        transform: rotate(270deg);
+        transition: transform 0.3s ease; /* Optional: Add a smooth transition effect */
+      }
     </style>
 
     <link rel="stylesheet" href="../_static/stylesheets/application.css" />
@@ -102,6 +106,8 @@
       integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA="
       src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"
     ></script>
+    <script src="_static/javascripts/version_dropdown.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. CI-CD Procedures" href="ci-cd.html" />
@@ -313,7 +319,6 @@
                       >MYCELIUM</a
                     >
                   </label>
-
                   <ul class="md-nav__list">
                     <li class="md-nav__item" id="introductionBlock">
                       <span
@@ -338,18 +343,18 @@
                     </li>
                     <span class="introductionContent">
                       <li class="md-nav__item">
-                        <a href="Guide/purpose.html" class="md-nav__link"
+                        <a href="purpose.html" class="md-nav__link"
                           >1. Statement of Purpose</a
                         >
                       </li>
                       <li class="md-nav__item">
-                        <a href="Guide/guidelines.html" class="md-nav__link"
+                        <a href="guidelines.html" class="md-nav__link"
                           >2. Rules and Procedure</a
                         >
                       </li>
                       <li class="md-nav__item">
                         <a
-                          href="Guide/chain-of-command.html"
+                          href="chain-of-command.html"
                           class="md-nav__link"
                           >3. Chain of Command</a
                         >
@@ -378,17 +383,17 @@
                     </li>
                     <span class="GuideContent">
                       <li class="md-nav__item">
-                        <a href="Guide/ci-cd.html" class="md-nav__link"
+                        <a href="ci-cd.html" class="md-nav__link"
                           >1. CI-CD Procedures</a
                         >
                       </li>
                       <li class="md-nav__item">
-                        <a href="Guide/kubeflow.html" class="md-nav__link"
+                        <a href="kubeflow.html" class="md-nav__link"
                           >2. Getting Started with Kubeflow</a
                         >
                       </li>
                       <li class="md-nav__item">
-                        <a href="Guide/dashboard.html" class="md-nav__link"
+                        <a href="dashboard.html" class="md-nav__link"
                           >3. Platform Introduction Tutorial</a
                         >
                       </li>

@@ -32,6 +32,31 @@
       pre {
         font-family: "Roboto Mono", "Courier New", Courier, monospace
       }
+      .introductionContent {
+        display: none;
+      }
+      .GuideContent {
+        display: none;
+      }
+      .examplecontent {
+        display: none;
+      }
+      .REFERENCEScontent {
+        display: none;
+      }
+      .databasecontent {
+        display: none;
+      }
+      .modealscontent {
+        display: none;
+      }
+      .analyticscontent {
+        display: none;
+      }
+      .rotated {
+        transform: rotate(270deg);
+        transition: transform 0.3s ease; /* Optional: Add a smooth transition effect */
+      }
     </style>
   
 
@@ -60,7 +85,52 @@
     <link rel="next" title="2. Getting Started with Kubeflow" href="kubeflow.html" />
     <link rel="prev" title="3. Chain of Command" href="chain-of-command.html" />
   
-   
+    <script src="_static/javascripts/version_dropdown.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#introductionBlock").click(function () {
+          $(".introductionContent").toggle();
+          $("#arrowIcon").toggleClass("rotated");
+        });
+      });
+      $(document).ready(function () {
+        $("#GUIDEBlock").click(function () {
+          $(".GuideContent").toggle();
+          $("#arrowIconguide").toggleClass("rotated");
+        });
+      });
+      $(document).ready(function () {
+        $("#exampleBlock").click(function () {
+          $(".examplecontent").toggle();
+          $("#arrowIconexample").toggleClass("rotated");
+        });
+      });
+      $(document).ready(function () {
+        $("#REFERENCESBlock").click(function () {
+          $(".REFERENCEScontent").toggle();
+          $("#arrowIconREFERENCES").toggleClass("rotated");
+        });
+      });
+      $(document).ready(function () {
+        $("#databaseblock").click(function () {
+          $(".databasecontent").toggle();
+          $("#arrowIcondatabase").toggleClass("rotated");
+        });
+      });
+      $(document).ready(function () {
+        $("#modalsblock").click(function () {
+          $(".modealscontent").toggle();
+          $("#arrowIconmodals").toggleClass("rotated");
+        });
+      });
+      $(document).ready(function () {
+        $("#analyticsblock").click(function () {
+          $(".analyticscontent").toggle();
+          $("#arrowIconanalytics").toggleClass("rotated");
+        });
+      });
+    </script>
 
   </head>
   <body dir=ltr
@@ -175,208 +245,286 @@
 
   
   <ul class="md-nav__list">
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">INTRODUCTION</span></span>
-    
+    <li class="md-nav__item" id="introductionBlock">
+      <span
+        class="md-nav__link caption"
+        style="display: flex; justify-content: space-between"
+      >
+        <span class="caption-text">INTRODUCTION</span>
+        <svg
+          class="rotated"
+          id="arrowIcon"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          />
+        </svg>
+      </span>
     </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="purpose.html" class="md-nav__link">1. Statement of Purpose</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="guidelines.html" class="md-nav__link">2. Rules and Procedure</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="chain-of-command.html" class="md-nav__link">3. Chain of Command</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">GUIDE</span></span>
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    <label class="md-nav__link md-nav__link--active" for="__toc"> 1. CI-CD Procedures </label>
-    
-      <a href="#" class="md-nav__link md-nav__link--active">1. CI-CD Procedures</a>
-      
-        
-<nav class="md-nav md-nav--secondary">
-    <label class="md-nav__title" for="__toc">"Contents"</label>
-  <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#guide-ci-cd--page-root" class="md-nav__link">1. CI-CD Procedures</a><nav class="md-nav">
-              <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#create-a-new-project" class="md-nav__link">1.1. Create a New Project</a>
-        </li>
-        <li class="md-nav__item"><a href="#update-the-template" class="md-nav__link">1.2. Update the Template</a>
-        </li>
-        <li class="md-nav__item"><a href="#code-build-and-run-in-your-environment" class="md-nav__link">1.3. Code, Build, and Run in Your Environment</a>
-        </li>
-        <li class="md-nav__item"><a href="#update-your-test-files" class="md-nav__link">1.4. Update Your Test Files</a>
-        </li>
-        <li class="md-nav__item"><a href="#push-in-the-dev-environment" class="md-nav__link">1.5. Push in the Dev Environment</a>
-        </li></ul>
-            </nav>
-        </li>
-    
-<li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/Guide/ci-cd.rst.txt">Show Source</a> </li>
+    <span class="introductionContent">
+      <li class="md-nav__item">
+        <a href="purpose.html" class="md-nav__link"
+          >1. Statement of Purpose</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a href="guidelines.html" class="md-nav__link"
+          >2. Rules and Procedure</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="chain-of-command.html"
+          class="md-nav__link"
+          >3. Chain of Command</a
+        >
+      </li>
+    </span>
 
-  </ul>
-</nav>
-      
-    
+    <li class="md-nav__item" id="GUIDEBlock">
+      <span
+        class="md-nav__link caption"
+        style="display: flex; justify-content: space-between"
+        ><span class="caption-text">GUIDE</span>
+        <svg
+          class="rotated"
+          id="arrowIconguide"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          />
+        </svg>
+      </span>
     </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="kubeflow.html" class="md-nav__link">2. Getting Started with Kubeflow</a>
-      
-    
+    <span class="GuideContent">
+      <li class="md-nav__item">
+        <a href="ci-cd.html" class="md-nav__link"
+          >1. CI-CD Procedures</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a href="kubeflow.html" class="md-nav__link"
+          >2. Getting Started with Kubeflow</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a href="dashboard.html" class="md-nav__link"
+          >3. Platform Introduction Tutorial</a
+        >
+      </li>
+    </span>
+    <li class="md-nav__item" id="exampleBlock">
+      <span
+        class="md-nav__link caption"
+        style="display: flex; justify-content: space-between"
+        ><span class="caption-text">EXAMPLES</span>
+        <svg
+          class="rotated"
+          id="arrowIconexample"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          />
+        </svg>
+      </span>
     </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="dashboard.html" class="md-nav__link">3. Platform Introduction Tutorial</a>
-      
-    
+    <span class="examplecontent">
+      <li class="md-nav__item">
+        <a href="../Examples/notebooks.html" class="md-nav__link"
+          >1. Create a Kubeflow Notebook</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a href="../Examples/katib.html" class="md-nav__link"
+          >2. Optimize Parameters</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="../Examples/tensorboards.html"
+          class="md-nav__link"
+          >3. Visualize Train and Test Results</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="../Examples/plot-overview.html"
+          class="md-nav__link"
+          >4. Plotting</a
+        >
+      </li>
+    </span>
+    <li class="md-nav__item" id="REFERENCESBlock">
+      <span
+        class="md-nav__link caption"
+        style="display: flex; justify-content: space-between"
+        ><span class="caption-text">REFERENCES</span>
+        <svg
+          class="rotated"
+          id="arrowIconREFERENCES"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          />
+        </svg>
+      </span>
     </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">EXAMPLES</span></span>
-    
+    <span class="REFERENCEScontent">
+      <li class="md-nav__item">
+        <a href="../References/Mycelium.html" class="md-nav__link"
+          >Mycelium.py</a
+        >
+      </li>
+    </span>
+    <li class="md-nav__item" id="databaseblock">
+      <span
+        class="md-nav__link caption"
+        style="display: flex; justify-content: space-between"
+        ><span class="caption-text">database/</span>
+        <svg
+          class="rotated"
+          id="arrowIcondatabase"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          />
+        </svg>
+      </span>
     </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../Examples/notebooks.html" class="md-nav__link">1. Create a Kubeflow Notebook</a>
-      
-    
+    <span class="databasecontent">
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/Inchworm.html"
+          class="md-nav__link"
+          >Inchworm.py</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/Tree.html"
+          class="md-nav__link"
+          >Tree.py</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/Branch.html"
+          class="md-nav__link"
+          >Branch.py</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/Crawler.html"
+          class="md-nav__link"
+          >Crawler.py</a
+        >
+      </li>
+    </span>
+    <li class="md-nav__item" id="modalsblock">
+      <span
+        class="md-nav__link caption"
+        style="display: flex; justify-content: space-between"
+        ><span class="caption-text">models/</span>
+        <svg
+          class="rotated"
+          id="arrowIconmodals"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          />
+        </svg>
+      </span>
     </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../Examples/katib.html" class="md-nav__link">2. Optimize Parameters</a>
-      
-    
+    <span class="modealscontent">
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/Hyphae.html"
+          class="md-nav__link"
+          >Hyphae.py</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/LLAMA.html"
+          class="md-nav__link"
+          >LLAMA.py</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/Psilocybin.html"
+          class="md-nav__link"
+          >Psilocybin.py</a
+        >
+      </li>
+    </span>
+    <li class="md-nav__item" id="analyticsblock">
+      <span
+        class="md-nav__link caption"
+        style="display: flex; justify-content: space-between"
+        ><span class="caption-text">analytics/</span>
+        <svg
+          class="rotated"
+          id="arrowIconanalytics"
+          xmlns="http://www.w3.org/2000/svg"
+          height="16"
+          width="14"
+          viewBox="0 0 448 512"
+        >
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"
+          />
+        </svg>
+      </span>
     </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../Examples/tensorboards.html" class="md-nav__link">3. Visualize Train and Test Results</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../Examples/plot-overview.html" class="md-nav__link">4. Plotting</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">REFERENCES</span></span>
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium.html" class="md-nav__link">Mycelium.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">database/</span></span>
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/Inchworm.html" class="md-nav__link">Inchworm.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/Tree.html" class="md-nav__link">Tree.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/Branch.html" class="md-nav__link">Branch.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/Crawler.html" class="md-nav__link">Crawler.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">models/</span></span>
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/Hyphae.html" class="md-nav__link">Hyphae.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/LLAMA.html" class="md-nav__link">LLAMA.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/Psilocybin.html" class="md-nav__link">Psilocybin.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">analytics/</span></span>
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/Plot.html" class="md-nav__link">Plot.py</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../References/Mycelium/Cap.html" class="md-nav__link">Cap.py</a>
-      
-    
-    </li>
+    <span class="analyticscontent">
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/Plot.html"
+          class="md-nav__link"
+          >Plot.py</a
+        >
+      </li>
+      <li class="md-nav__item">
+        <a
+          href="../References/Mycelium/Cap.html"
+          class="md-nav__link"
+          >Cap.py</a
+        >
+      </li>
+    </span>
   </ul>
   
 
