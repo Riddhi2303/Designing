@@ -32,6 +32,31 @@
       pre {
         font-family: "Roboto Mono", "Courier New", Courier, monospace
       }
+      .rotated {
+        transform: rotate(270deg);
+        transition: transform 0.3s ease; /* Optional: Add a smooth transition effect */
+      }
+      .introductionContent{
+        display:none
+      }
+      .GuideContent{
+        display:none
+      }
+    .examplecontent {
+      display: none;
+    }
+    .REFERENCEScontent {
+      display: none;
+    }
+    .databasecontent {
+      display: none;
+    }
+    .modealscontent {
+      display: none;
+    }
+    .analyticscontent {
+      display: none;
+    }
     </style>
   
 
@@ -59,7 +84,52 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Visualize Train and Test Results" href="tensorboards.html" />
     <link rel="prev" title="1. Create a Kubeflow Notebook" href="notebooks.html" />
-  
+    <script src="_static/javascripts/version_dropdown.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+          <script>
+            $(document).ready(function () {
+              $("#introductionBlock").click(function () {
+                $(".introductionContent").toggle();
+                $("#arrowIcon").toggleClass("rotated");
+              });
+            });
+            $(document).ready(function () {
+              $("#GUIDEBlock").click(function () {
+                $(".GuideContent").toggle();
+                $("#arrowIconguide").toggleClass("rotated");
+              });
+            });
+            $(document).ready(function () {
+              $("#exampleBlock").click(function () {
+                $(".examplecontent").toggle();
+                $("#arrowIconexample").toggleClass("rotated");
+              });
+            });
+            $(document).ready(function () {
+              $("#REFERENCESBlock").click(function () {
+                $(".REFERENCEScontent").toggle();
+                $("#arrowIconREFERENCES").toggleClass("rotated");
+              });
+            });
+            $(document).ready(function () {
+              $("#databaseblock").click(function () {
+                $(".databasecontent").toggle();
+                $("#arrowIcondatabase").toggleClass("rotated");
+              });
+            });
+            $(document).ready(function () {
+              $("#modalsblock").click(function () {
+                $(".modealscontent").toggle();
+                $("#arrowIconmodals").toggleClass("rotated");
+              });
+            });
+            $(document).ready(function () {
+              $("#analyticsblock").click(function () {
+                $(".analyticscontent").toggle();
+                $("#arrowIconanalytics").toggleClass("rotated");
+              });
+            });
+          </script>
    
 
   </head>
@@ -175,11 +245,17 @@
 
   
   <ul class="md-nav__list">
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">INTRODUCTION</span></span>
+    <li class="md-nav__item" id="introductionBlock">  
+      <span class="md-nav__link caption" style="display: flex;justify-content: space-between;">
+        <span class="caption-text">INTRODUCTION</span>
+        <svg class="rotated" id="arrowIcon" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+        </svg>
+      </span>  
     
     </li>
+    <span class="introductionContent">
     <li class="md-nav__item">
     
     
@@ -201,11 +277,19 @@
       
     
     </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">GUIDE</span></span>
-    
-    </li>
+  </span>
+  <li class="md-nav__item" id="GUIDEBlock">
+    <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
+      ><span class="caption-text">GUIDE</span>
+       <svg class="rotated" id="arrowIconguide" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+      </svg>
+      </span
+    >
+  </li>
+  <span class="GuideContent">
+
     <li class="md-nav__item">
     
     
@@ -220,13 +304,18 @@
       
     
     </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../Guide/dashboard.html" class="md-nav__link">3. Platform Introduction Tutorial</a>
-      
-    
+    </span>
+    <li class="md-nav__item" id="exampleBlock">
+      <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
+        ><span class="caption-text">EXAMPLES</span>
+        <svg class="rotated" id="arrowIconexample" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+        </svg>
+        </span
+      >
     </li>
+    <span class="examplecontent">
     <li class="md-nav__item">
     
       <span class="md-nav__link caption"><span class="caption-text">EXAMPLES</span></span>
@@ -247,7 +336,7 @@
     
       <a href="#" class="md-nav__link md-nav__link--active">2. Optimize Parameters</a>
       
-        
+  
 <nav class="md-nav md-nav--secondary">
     <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
@@ -287,11 +376,18 @@
       
     
     </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">REFERENCES</span></span>
-    
-    </li>
+  </span>
+  <li class="md-nav__item"  id="REFERENCESBlock">
+    <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
+      ><span class="caption-text">REFERENCES</span>
+      <svg class="rotated" id="arrowIconREFERENCES" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+      </svg>
+      </span
+    >
+  </li>
+  <span class="REFERENCEScontent">
     <li class="md-nav__item">
     
     
@@ -299,11 +395,18 @@
       
     
     </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">database/</span></span>
-    
+    </span>
+    <li class="md-nav__item" id="databaseblock">
+      <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
+        ><span class="caption-text">database/</span>
+        <svg class="rotated" id="arrowIcondatabase" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+        </svg>
+        </span
+      >
     </li>
+    <span class="databasecontent">
     <li class="md-nav__item">
     
     
@@ -332,11 +435,18 @@
       
     
     </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">models/</span></span>
-    
-    </li>
+  </span>
+  <li class="md-nav__item" id="modalsblock">
+    <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
+      ><span class="caption-text">models/</span>
+      <svg class="rotated" id="arrowIconmodals" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+        <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+      </svg>
+      </span
+    >
+  </li>
+  <span class="modealscontent">
     <li class="md-nav__item">
     
     
@@ -358,14 +468,19 @@
       
     
     </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">analytics/</span></span>
-    
+    </span>
+    <li class="md-nav__item" id="analyticsblock">
+      <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
+        ><span class="caption-text">analytics/</span>
+        <svg class="rotated" id="arrowIconanalytics" xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
+          <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+        </svg>
+        </span
+      >
     </li>
+    <span class="analyticscontent">
     <li class="md-nav__item">
-    
-    
       <a href="../References/Mycelium/Plot.html" class="md-nav__link">Plot.py</a>
       
     
@@ -377,6 +492,7 @@
       
     
     </li>
+    </span>
   </ul>
   
 
