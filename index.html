@@ -102,7 +102,8 @@
 
       .dark-mode {
         background-color: #2e303e;
-        color: white;
+        color: hsla(232, 18%, 86%, 1);
+        border-bottom: none;
       }
       .dark {
         fill: white;
@@ -132,7 +133,6 @@
         var title = document.getElementById('index--page-root');
         var svg = document.getElementById("toggleIcon");
         var arrowIcons = document.querySelectorAll('#arrowIcon, #arrowIconguide, #arrowIconexample, #arrowIconREFERENCES, #arrowIcondatabase, #arrowIconmodals, #arrowIconanalytics');
-        console.log("🚀 ~ myFunction ~ arrowIcons:", arrowIcons)
 
 // Now arrowIcons is a NodeList containing all elements with the specified IDs
       
@@ -200,7 +200,7 @@
       for="__drawer"
     ></label>
     <a href="#index" tabindex="1" class="md-skip"> Skip to content </a>
-    <header class="md-header" style="height: 5.4rem" data-md-component="header">
+    <header class="md-header" style="height: 5.4rem ; border-bottom: 0.1rem solid rgb(0 0 0 / 7%);", data-md-component="header">
       <nav class="md-header-nav md-grid">
         <div class="md-flex navheader">
           <div class="md-flex__cell md-flex__cell--shrink">
@@ -357,7 +357,7 @@
           >
         </div>
       </nav>
-      <hr style="background-color: rgb(185, 180, 180)" />
+      <!-- <hr style="background-color: rgb(185, 180, 180)" /> -->
     </header>
 
     <div class="md-container">
