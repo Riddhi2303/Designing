@@ -57,7 +57,34 @@
     .analyticscontent {
       display: none;
     }
+    body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+
+    .dark-mode {
+      background-color: #2e303e;
+      color: white;
+    }
+    .dark {
+      fill: white;
+    }
+    .arrowdark {
+      fill: white;
+    }
+    .md-header.dark-mode {
+      background-color: #0A314D; 
+      color: #fff; 
+    }
+    .titleofpage.white {
+color: #ffffff;
+
+
+}
     </style>
+
   
 
   <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
@@ -113,6 +140,57 @@
                 $("#arrowIconanalytics").toggleClass("rotated");
               });
             });
+          </script>
+            <script>
+              function myFunction() {
+                  let theme = localStorage.getItem("theme");
+          
+                  if (!theme || theme === "light-mode") {
+                      localStorage.setItem("theme", "dark-mode");
+                  } else {
+                      localStorage.setItem("theme", "light-mode");
+                  }
+          
+                  applyTheme();
+              }
+          
+              function applyTheme() {
+              let theme = localStorage.getItem("theme");
+              var element = document.body;
+              var header = document.querySelector(".md-header");
+              var title = document.getElementById("examples-tensorboards--page-root");
+              var svg = document.getElementById("toggleIcon");
+              var arrowIcons = document.querySelectorAll(
+                  "#arrowIcon, #arrowIconguide, #arrowIconexample, #arrowIconREFERENCES, #arrowIcondatabase, #arrowIconmodals, #arrowIconanalytics"
+              );
+          
+              arrowIcons.forEach(function (arrowIcon) {
+                  arrowIcon.classList.remove("arrowdark");
+              });
+          
+              element.classList.remove("light-mode", "dark-mode");
+              header.classList.remove("light-mode", "dark-mode");
+              title.classList.remove("white");
+              svg.classList.remove("dark");
+          
+              if (theme === "dark-mode") {
+                  element.classList.add("dark-mode");
+                  header.classList.add("dark-mode");
+                  svg.classList.add("dark");
+                  title.classList.add("white");
+                  arrowIcons.forEach(function (arrowIcon) {
+                      arrowIcon.classList.add("arrowdark");
+                  });
+              } else {
+                  element.classList.add("light-mode");
+                  header.classList.add("light-mode");
+              }
+          }
+          
+          document.addEventListener("DOMContentLoaded", function () {
+              applyTheme();
+          });
+          
           </script>
   
   
@@ -619,7 +697,7 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="visualize-train-and-test-results">
-<h1 id="examples-tensorboards--page-root"><span class="section-number">3. </span>Visualize Train and Test Results<a class="headerlink" href="#examples-tensorboards--page-root" title="Link to this heading">¶</a></h1>
+<h1 id="examples-tensorboards--page-root" class="titleofpage"><span class="section-number">3. </span>Visualize Train and Test Results<a class="headerlink" href="#examples-tensorboards--page-root" title="Link to this heading">¶</a></h1>
 <p>This tutorial will guide you through the process of using TensorBoard, a suite of visualization tools provided by TensorFlow, with PyTorch.</p>
 <section id="install-necessary-libraries">
 <h2 id="install-necessary-libraries"><span class="section-number">3.1. </span>Install Necessary Libraries<a class="headerlink" href="#install-necessary-libraries" title="Link to this heading">¶</a></h2>

@@ -113,40 +113,75 @@
       }
       .md-header.dark-mode {
         /* Your styles for the md-header with dark-mode class go here */
-        background-color: #0A314D; /* For example, change background color to dark gray */
+        background-color: #0a314d; /* For example, change background color to dark gray */
         color: #fff; /* Change text color to white */
         /* Add any other styles you want */
       }
       .titleofpage.white {
-  /* Your styles for the element with both titleofpage and white classes go here */
-  color: #ffffff; /* For example, set text color to white */
-  /* Add any other styles you want */
-  
-}
-    </style>
-    <script>
-      function myFunction() {
-        var element = document.body;
-
-        // Use document.querySelector to select the header element
-        var header = document.querySelector(".md-header");
-        var title = document.getElementById('index--page-root');
-        var svg = document.getElementById("toggleIcon");
-        var arrowIcons = document.querySelectorAll('#arrowIcon, #arrowIconguide, #arrowIconexample, #arrowIconREFERENCES, #arrowIcondatabase, #arrowIconmodals, #arrowIconanalytics');
-
-// Now arrowIcons is a NodeList containing all elements with the specified IDs
-      
-        // Toggle dark mode class on body and header
-        element.classList.toggle("dark-mode");
-        header.classList.toggle("dark-mode");
-        title.classList.toggle('white');
-        svg.classList.toggle('dark');
-        arrowIcons.forEach(function (arrowIcon) {
-  arrowIcon.classList.toggle('arrowdark');
-});
-
-
+        /* Your styles for the element with both titleofpage and white classes go here */
+        color: #ffffff; /* For example, set text color to white */
+        /* Add any other styles you want */
       }
+    </style>
+     <script>
+        function myFunction() {
+            // Retrieve the current theme from local storage
+            let theme = localStorage.getItem("theme");
+
+            // Toggle between light and dark themes
+            if (!theme || theme === "light-mode") {
+                localStorage.setItem("theme", "dark-mode");
+            } else {
+                localStorage.setItem("theme", "light-mode");
+            }
+
+            // Apply the theme to the page
+            applyTheme();
+        }
+
+        function applyTheme() {
+            // Retrieve the current theme from local storage
+            let theme = localStorage.getItem("theme");
+            console.log("🚀 ~ applyTheme ~ theme:", theme)
+
+            // Select elements to be themed
+            var element = document.body;
+            var header = document.querySelector(".md-header");
+            var title = document.getElementById("index--page-root");
+            var svg = document.getElementById("toggleIcon");
+            var arrowIcons = document.querySelectorAll(
+                "#arrowIcon, #arrowIconguide, #arrowIconexample, #arrowIconREFERENCES, #arrowIcondatabase, #arrowIconmodals, #arrowIconanalytics"
+            );
+
+            // Remove all theme classes before applying the updated theme
+            element.classList.remove("light-mode", "dark-mode");
+            header.classList.remove("light-mode", "dark-mode");
+            title.classList.remove("white");
+            svg.classList.remove("dark");
+            
+            // Remove the arrowdark class from all arrowIcons
+            arrowIcons.forEach(function (arrowIcon) {
+                arrowIcon.classList.remove("arrowdark");
+            });
+
+            // Apply the current theme classes
+            element.classList.add(theme);
+            header.classList.add(theme);
+            title.classList.add(theme === "dark-mode" ? "white" : "");  // Add "white" class for dark mode
+            svg.classList.add(theme === "dark-mode" ? "dark" : ""); 
+            
+            // Add the arrowdark class to arrowIcons if the theme is dark-mode
+            if (theme === "dark-mode") {
+                arrowIcons.forEach(function (arrowIcon) {
+                    arrowIcon.classList.add("arrowdark");
+                });
+            }
+        }
+
+        // Apply the theme on page load
+        document.addEventListener("DOMContentLoaded", function () {
+            applyTheme();
+        });
     </script>
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
@@ -200,7 +235,12 @@
       for="__drawer"
     ></label>
     <a href="#index" tabindex="1" class="md-skip"> Skip to content </a>
-    <header class="md-header" style="height: 5.4rem ; border-bottom: 0.1rem solid rgb(0 0 0 / 7%);", data-md-component="header">
+    <header
+      class="md-header"
+      style="height: 5.4rem; border-bottom: 0.1rem solid rgb(0 0 0 / 7%)"
+      ,
+      data-md-component="header"
+    >
       <nav class="md-header-nav md-grid">
         <div class="md-flex navheader">
           <div class="md-flex__cell md-flex__cell--shrink">
@@ -243,11 +283,10 @@
                 >
                   <button onclick="myFunction()">
                     <svg
-                     style="height: 30px;" 
+                      style="height: 30px"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                       id="toggleIcon"
-                    
                     >
                       <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                       <path
@@ -348,7 +387,7 @@
           >
           <span
             style="
-              color:#676666;
+              color: #676666;
               margin-left: 20px;
               font-size: 20px;
               font-weight: 600;

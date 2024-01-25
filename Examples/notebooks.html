@@ -57,6 +57,35 @@
     .analyticscontent {
       display: none;
     }
+    body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+
+    .dark-mode {
+      background-color: #2e303e;
+      color: white;
+    }
+    .dark {
+      fill: white;
+    }
+    .arrowdark {
+      fill: white;
+    }
+    .md-header.dark-mode {
+      /* Your styles for the md-header with dark-mode class go here */
+      background-color: #0A314D; /* For example, change background color to dark gray */
+      color: #fff; /* Change text color to white */
+      /* Add any other styles you want */
+    }
+    .titleofpage.white {
+/* Your styles for the element with both titleofpage and white classes go here */
+color: #ffffff; /* For example, set text color to white */
+/* Add any other styles you want */
+
+}
     </style>
 
   <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
@@ -66,6 +95,57 @@
   <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
   
   <meta name="theme-color" content="#3f51b5">
+  <script>
+    function myFunction() {
+        let theme = localStorage.getItem("theme");
+
+        if (!theme || theme === "light-mode") {
+            localStorage.setItem("theme", "dark-mode");
+        } else {
+            localStorage.setItem("theme", "light-mode");
+        }
+
+        applyTheme();
+    }
+
+    function applyTheme() {
+    let theme = localStorage.getItem("theme");
+    var element = document.body;
+    var header = document.querySelector(".md-header");
+    var title = document.getElementById("examples-notebooks--page-root");
+    var svg = document.getElementById("toggleIcon");
+    var arrowIcons = document.querySelectorAll(
+        "#arrowIcon, #arrowIconguide, #arrowIconexample, #arrowIconREFERENCES, #arrowIcondatabase, #arrowIconmodals, #arrowIconanalytics"
+    );
+
+    arrowIcons.forEach(function (arrowIcon) {
+        arrowIcon.classList.remove("arrowdark");
+    });
+
+    element.classList.remove("light-mode", "dark-mode");
+    header.classList.remove("light-mode", "dark-mode");
+    title.classList.remove("white");
+    svg.classList.remove("dark");
+
+    if (theme === "dark-mode") {
+        element.classList.add("dark-mode");
+        header.classList.add("dark-mode");
+        svg.classList.add("dark");
+        title.classList.add("white");
+        arrowIcons.forEach(function (arrowIcon) {
+            arrowIcon.classList.add("arrowdark");
+        });
+    } else {
+        element.classList.add("light-mode");
+        header.classList.add("light-mode");
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    applyTheme();
+});
+
+</script>
   <script src="../_static/javascripts/modernizr.js"></script>
   <script src="_static/javascripts/version_dropdown.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -583,7 +663,7 @@
 <nav class="md-nav md-nav--secondary">
     <label class="md-nav__title" for="__toc">"Contents"</label>
   <ul class="md-nav__list" data-md-scrollfix="">
-        <li class="md-nav__item"><a href="#examples-notebooks--page-root" class="md-nav__link">1. Create a Kubeflow Notebook</a><nav class="md-nav">
+        <li class="md-nav__item"><a href="#examples-notebooks--page-root"  class="md-nav__link">1. Create a Kubeflow Notebook</a><nav class="md-nav">
               <ul class="md-nav__list">
         <li class="md-nav__item"><a href="#coding-a-notebook-model" class="md-nav__link">1.1. Coding a Notebook Model</a>
         </li></ul>
@@ -604,7 +684,7 @@
           <article class="md-content__inner md-typeset" role="main">
             
   <section id="create-a-kubeflow-notebook">
-<span id="create-a-notebook"></span><h1 id="examples-notebooks--page-root"><span class="section-number">1. </span>Create a Kubeflow Notebook<a class="headerlink" href="#examples-notebooks--page-root" title="Link to this heading">¶</a></h1>
+<span id="create-a-notebook"></span><h1 id="examples-notebooks--page-root" class="titleofpage"><span class="section-number">1. </span>Create a Kubeflow Notebook<a class="headerlink" href="#examples-notebooks--page-root" title="Link to this heading">¶</a></h1>
 <p>Kubeflow offers web-based development environments in Kubernetes clusters called a notebook (Don’t use Visual Studio Code). These are the following steps to get a notebook setup in Kubeflow</p>
 <p><strong>Step 1.</strong> Open the Kubeflow Central Dashboard in your browser.</p>
 <p><strong>Step 2.</strong> Click “Notebooks” in the left-hand panel.</p>
