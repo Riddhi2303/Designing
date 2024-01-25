@@ -69,35 +69,41 @@
   <meta name="theme-color" content="#3f51b5">
   <script src="../_static/javascripts/modernizr.js"></script>
   <style>
-    body {
-      padding: 25px;
-      background-color: white;
-      color: black;
-      font-size: 25px;
-    }
+  body,
+  input {
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
 
-    .dark-mode {
-      background-color: #2e303e;
-      color: white;
-    }
-    .dark {
-      fill: white;
-    }
-    .arrowdark {
-      fill: white;
-    }
-    .md-header.dark-mode {
-      /* Your styles for the md-header with dark-mode class go here */
-      background-color: #0A314D; /* For example, change background color to dark gray */
-      color: #fff; /* Change text color to white */
-      /* Add any other styles you want */
-    }
-    .titleofpage.white {
-/* Your styles for the element with both titleofpage and white classes go here */
-color: #ffffff; /* For example, set text color to white */
-/* Add any other styles you want */
-
-}
+  code,
+  kbd,
+  pre {
+    font-family: "Roboto Mono", "Courier New", Courier, monospace;
+  }
+  .rotated {
+    transform: rotate(270deg);
+    transition: transform 0.3s ease; /* Optional: Add a smooth transition effect */
+  }
+  .introductionContent {
+    display: none;
+  }
+  .GuideContent {
+    display: none;
+  }
+  .examplecontent {
+    display: none;
+  }
+  .REFERENCEScontent {
+    display: none;
+  }
+  .databasecontent {
+    display: none;
+  }
+  .modealscontent {
+    display: none;
+  }
+  .analyticscontent {
+    display: none;
+  }
   </style>
   <script>
     function myFunction() {
