@@ -25,16 +25,12 @@
     />
 
     <style>
+
       .md-nav__item.active {
         color: white;
-        padding: 7px 0px 7px 7px;
+        padding: 7px 0px 7px 10px;
         position: relative;
-        margin-left: -10px;
         background: #0a314d;
-        margin-right: 10px;
-      }
-      .md-nav__link{
-        padding-left: 20px;
       }
       .md-nav__item.active .introductionContent {
         display: block; 
@@ -367,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
           <script>
             $(document).ready(function () {
-              if ($(".md-nav__item").hasClass("active")) {
+              if ($("#rulesListItem").hasClass("active")) {
                 $(".introductionContent").show();
               }
 
@@ -377,7 +373,7 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             });
             $(document).ready(function () {
-              if ($(".md-nav__item").hasClass("active")) {
+              if ($("#guide").hasClass("active")) {
                 $(".GuideContent").show();
               }
               $("#GUIDEBlock").click(function () {
@@ -386,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             });
             $(document).ready(function () {
-              if ($(".md-nav__item").hasClass("active")) {
+              if ($("#example").hasClass("active")) {
                 $(".examplecontent").show();
               }
               $("#exampleBlock").click(function () {
@@ -398,7 +394,7 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             });
             $(document).ready(function () {
-              if ($(".md-nav__item").hasClass("active")) {
+              if ($("#refrence").hasClass("active")) {
                 $(".REFERENCEScontent").show();
               }
               $("#REFERENCESBlock").click(function () {
@@ -407,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             });
             $(document).ready(function () {
-              if ($(".md-nav__item").hasClass("active")) {
+              if ($("#database").hasClass("active")) {
                 $(".databasecontent").show();
               }
               $("#databaseblock").click(function () {
@@ -416,7 +412,7 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             });
             $(document).ready(function () {
-              if ($(".md-nav__item").hasClass("active")) {
+              if ($("#modal").hasClass("active")) {
                 $(".modealscontent").show();
               }
               $("#modalsblock").click(function () {
@@ -425,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function () {
               });
             });
             $(document).ready(function () {
-              if ($(".md-nav__item").hasClass("active")) {
+              if ($(".analytics").hasClass("active")) {
                 $(".analyticscontent").show();
               }
               $("#analyticsblock").click(function () {
@@ -496,7 +492,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   </label>
 
                   <ul class="md-nav__list">
-                    <li class="md-nav__item" id="introductionBlock">
+                    <li class="md-nav__item introdunction" id="introductionBlock">
                       <span
                         class="md-nav__link caption"
                         style="display: flex; justify-content: space-between"
@@ -517,25 +513,28 @@ document.addEventListener("DOMContentLoaded", function () {
                         </svg>
                       </span>
                     </li>
-                    <span class="introductionContent">
-                      <li class="md-nav__item" id="rulesListItem">
-                        <a href="purpose.html" class="md-nav__link"
-                          >1. Statement of Purpose</a
-                        >
-                      </li>
-                      <li class="md-nav__item">
-                        <a href="guidelines.html" class="md-nav__link"
-                          >2. Rules and Procedure</a
-                        >
-                      </li>
-                      <li class="md-nav__item">
-                        <a href="chain-of-command.html" class="md-nav__link"
-                          >3. Chain of Command</a
-                        >
-                      </li>
-                    </span>
+                      <ul class="introductionContent">
+                        <li class="md-nav__item" id="rulesListItem">
+                          <a href="purpose.html" class="md-nav__link"
+                            >1. Statement of Purpose</a
+                          >
+                        </li>
+                        <li class="md-nav__item" id="rulesListItem">
+                          <a href="guidelines.html" class="md-nav__link"
+                            >2. Rules and Procedure</a
+                          >
+                        </li>
+                        <li class="md-nav__item" id="rulesListItem">
+                          <a href="chain-of-command.html" class="md-nav__link"
+                            >3. Chain of Command</a
+                          >
+                        </li>
+                     
+                  
+                  </ul>
+                   
 
-                    <li class="md-nav__item" id="GUIDEBlock">
+                    <li class="md-nav__item guide" id="GUIDEBlock">
                       <span
                         class="md-nav__link caption"
                         style="display: flex; justify-content: space-between"
@@ -555,24 +554,24 @@ document.addEventListener("DOMContentLoaded", function () {
                         </svg>
                       </span>
                     </li>
-                    <span class="GuideContent">
-                      <li class="md-nav__item">
+                    <ul class="GuideContent">
+                      <li class="md-nav__item" id="guide">
                         <a href="ci-cd.html" class="md-nav__link"
                           >1. CI-CD Procedures</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="guide">
                         <a href="kubeflow.html" class="md-nav__link"
                           >2. Getting Started with Kubeflow</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="guide">
                         <a href="dashboard.html" class="md-nav__link"
                           >3. Platform Introduction Tutorial</a
                         >
                       </li>
-                    </span>
-                    <li class="md-nav__item" id="exampleBlock">
+                    </ul>
+                    <li class="md-nav__item example" id="exampleBlock">
                       <span
                         class="md-nav__link caption"
                         style="display: flex; justify-content: space-between"
@@ -592,35 +591,35 @@ document.addEventListener("DOMContentLoaded", function () {
                         </svg>
                       </span>
                     </li>
-                    <span class="examplecontent">
-                      <li class="md-nav__item">
+                    <ul class="examplecontent">
+                      <li class="md-nav__item" id="example">
                         <a
                           href="../Examples/notebooks.html"
                           class="md-nav__link"
                           >1. Create a Kubeflow Notebook</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="example">
                         <a href="../Examples/katib.html" class="md-nav__link"
                           >2. Optimize Parameters</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="example">
                         <a
                           href="../Examples/tensorboards.html"
                           class="md-nav__link"
                           >3. Visualize Train and Test Results</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="example">
                         <a
                           href="../Examples/plot-overview.html"
                           class="md-nav__link"
                           >4. Plotting</a
                         >
                       </li>
-                    </span>
-                    <li class="md-nav__item" id="REFERENCESBlock">
+                    </ul>
+                    <li class="md-nav__item refrence" id="REFERENCESBlock">
                       <span
                         class="md-nav__link caption"
                         style="display: flex; justify-content: space-between"
@@ -640,16 +639,16 @@ document.addEventListener("DOMContentLoaded", function () {
                         </svg>
                       </span>
                     </li>
-                    <span class="REFERENCEScontent">
-                      <li class="md-nav__item">
+                    <ul class="REFERENCEScontent">
+                      <li class="md-nav__item" id="refrence">
                         <a
                           href="../References/Mycelium.html"
                           class="md-nav__link"
                           >Mycelium.py</a
                         >
-                      </li>
+                      </ul>
                     </span>
-                    <li class="md-nav__item" id="databaseblock">
+                    <li class="md-nav__item database" id="databaseblock">
                       <span
                         class="md-nav__link caption"
                         style="display: flex; justify-content: space-between"
@@ -669,37 +668,37 @@ document.addEventListener("DOMContentLoaded", function () {
                         </svg>
                       </span>
                     </li>
-                    <span class="databasecontent">
-                      <li class="md-nav__item">
+                    <ul class="databasecontent">
+                      <li class="md-nav__item" id="database">
                         <a
                           href="../References/Mycelium/Inchworm.html"
                           class="md-nav__link"
                           >Inchworm.py</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="database">
                         <a
                           href="../References/Mycelium/Tree.html"
                           class="md-nav__link"
                           >Tree.py</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="database">
                         <a
                           href="../References/Mycelium/Branch.html"
                           class="md-nav__link"
                           >Branch.py</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="database">
                         <a
                           href="../References/Mycelium/Crawler.html"
                           class="md-nav__link"
                           >Crawler.py</a
                         >
                       </li>
-                    </span>
-                    <li class="md-nav__item" id="modalsblock">
+                    </ul>
+                    <li class="md-nav__item modal" id="modalsblock">
                       <span
                         class="md-nav__link caption"
                         style="display: flex; justify-content: space-between"
@@ -719,30 +718,30 @@ document.addEventListener("DOMContentLoaded", function () {
                         </svg>
                       </span>
                     </li>
-                    <span class="modealscontent">
-                      <li class="md-nav__item">
+                    <ul class="modealscontent">
+                      <li class="md-nav__item" id="modal">
                         <a
                           href="../References/Mycelium/Hyphae.html"
                           class="md-nav__link"
                           >Hyphae.py</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="modal">
                         <a
                           href="../References/Mycelium/LLAMA.html"
                           class="md-nav__link"
                           >LLAMA.py</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="modal">
                         <a
                           href="../References/Mycelium/Psilocybin.html"
                           class="md-nav__link"
                           >Psilocybin.py</a
                         >
                       </li>
-                    </span>
-                    <li class="md-nav__item" id="analyticsblock">
+                    </ul>
+                    <li class="md-nav__item analytics" id="analyticsblock">
                       <span
                         class="md-nav__link caption"
                         style="display: flex; justify-content: space-between"
@@ -762,22 +761,22 @@ document.addEventListener("DOMContentLoaded", function () {
                         </svg>
                       </span>
                     </li>
-                    <span class="analyticscontent">
-                      <li class="md-nav__item">
+                    <ul class="analyticscontent">
+                      <li class="md-nav__item" id="analytics">
                         <a
                           href="../References/Mycelium/Plot.html"
                           class="md-nav__link"
                           >Plot.py</a
                         >
                       </li>
-                      <li class="md-nav__item">
+                      <li class="md-nav__item" id="analytics">
                         <a
                           href="../References/Mycelium/Cap.html"
                           class="md-nav__link"
                           >Cap.py</a
                         >
                       </li>
-                    </span>
+                    </ul>
                   </ul>
                 </nav>
               </div>

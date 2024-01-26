@@ -337,42 +337,67 @@
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
           <script>
             $(document).ready(function () {
+              if ($("#rulesListItem").hasClass("active")) {
+                $(".introductionContent").show();
+              }
+
               $("#introductionBlock").click(function () {
                 $(".introductionContent").toggle();
                 $("#arrowIcon").toggleClass("rotated");
               });
             });
             $(document).ready(function () {
+              if ($("#guide").hasClass("active")) {
+                $(".GuideContent").show();
+              }
               $("#GUIDEBlock").click(function () {
                 $(".GuideContent").toggle();
                 $("#arrowIconguide").toggleClass("rotated");
               });
             });
             $(document).ready(function () {
+              if ($("#example").hasClass("active")) {
+                $(".examplecontent").show();
+              }
               $("#exampleBlock").click(function () {
+                if ($(".md-nav__item").hasClass("active")) {
+                $(".examplecontent").show();
+              }
                 $(".examplecontent").toggle();
                 $("#arrowIconexample").toggleClass("rotated");
               });
             });
             $(document).ready(function () {
+              if ($("#refrence").hasClass("active")) {
+                $(".REFERENCEScontent").show();
+              }
               $("#REFERENCESBlock").click(function () {
                 $(".REFERENCEScontent").toggle();
                 $("#arrowIconREFERENCES").toggleClass("rotated");
               });
             });
             $(document).ready(function () {
+              if ($("#database").hasClass("active")) {
+                $(".databasecontent").show();
+              }
               $("#databaseblock").click(function () {
                 $(".databasecontent").toggle();
                 $("#arrowIcondatabase").toggleClass("rotated");
               });
             });
             $(document).ready(function () {
+              if ($("#modal").hasClass("active")) {
+                $(".modealscontent").show();
+              }
               $("#modalsblock").click(function () {
                 $(".modealscontent").toggle();
                 $("#arrowIconmodals").toggleClass("rotated");
               });
             });
             $(document).ready(function () {
+              if ($(".analytics").hasClass("active")) {
+                $(".analyticscontent").show();
+              }
               $("#analyticsblock").click(function () {
                 $(".analyticscontent").toggle();
                 $("#arrowIconanalytics").toggleClass("rotated");
@@ -452,7 +477,7 @@
                         </svg>
                       </span>
                     </li>
-                    <span class="introductionContent">
+                    <ul class="introductionContent">
                       <li class="md-nav__item">
                         <a href="Guide/purpose.html" class="md-nav__link"
                           >1. Statement of Purpose</a
@@ -470,7 +495,7 @@
                           >3. Chain of Command</a
                         >
                       </li>
-                    </span>
+                    </ul>
 
                     <li class="md-nav__item" id="GUIDEBlock">
                       <span
@@ -492,7 +517,7 @@
                         </svg>
                       </span>
                     </li>
-                    <span class="GuideContent">
+                    <ul class="GuideContent">
                       <li class="md-nav__item">
                         <a href="Guide/ci-cd.html" class="md-nav__link"
                           >1. CI-CD Procedures</a
@@ -508,7 +533,7 @@
                           >3. Platform Introduction Tutorial</a
                         >
                       </li>
-                    </span>
+                    </ul>
                     <li class="md-nav__item" id="exampleBlock">
                       <span
                         class="md-nav__link caption"
@@ -529,7 +554,7 @@
                         </svg>
                       </span>
                     </li>
-                    <span class="examplecontent">
+                    <ul class="examplecontent">
                       <li class="md-nav__item">
                         <a href="Examples/notebooks.html" class="md-nav__link"
                           >1. Create a Kubeflow Notebook</a
@@ -554,7 +579,7 @@
                           >4. Plotting</a
                         >
                       </li>
-                    </span>
+                    </ul>
                     <li class="md-nav__item" id="REFERENCESBlock">
                       <span
                         class="md-nav__link caption"
@@ -575,13 +600,13 @@
                         </svg>
                       </span>
                     </li>
-                    <span class="REFERENCEScontent">
+                    <ul class="REFERENCEScontent">
                       <li class="md-nav__item">
                         <a href="References/Mycelium.html" class="md-nav__link"
                           >Mycelium.py</a
                         >
                       </li>
-                    </span>
+                    </ul>
                     <li class="md-nav__item" id="databaseblock">
                       <span
                         class="md-nav__link caption"
@@ -602,7 +627,7 @@
                         </svg>
                       </span>
                     </li>
-                    <span class="databasecontent">
+                    <ul class="databasecontent">
                       <li class="md-nav__item">
                         <a
                           href="References/Mycelium/Inchworm.html"
@@ -631,7 +656,7 @@
                           >Crawler.py</a
                         >
                       </li>
-                    </span>
+                    </ul>
                     <li class="md-nav__item" id="modalsblock">
                       <span
                         class="md-nav__link caption"

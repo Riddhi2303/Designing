@@ -100,50 +100,6 @@
   <script src="../_static/javascripts/modernizr.js"></script>
   <script src="_static/javascripts/version_dropdown.js"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-          <script>
-            $(document).ready(function () {
-              $("#introductionBlock").click(function () {
-                $(".introductionContent").toggle();
-                $("#arrowIcon").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#GUIDEBlock").click(function () {
-                $(".GuideContent").toggle();
-                $("#arrowIconguide").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#exampleBlock").click(function () {
-                $(".examplecontent").toggle();
-                $("#arrowIconexample").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#REFERENCESBlock").click(function () {
-                $(".REFERENCEScontent").toggle();
-                $("#arrowIconREFERENCES").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#databaseblock").click(function () {
-                $(".databasecontent").toggle();
-                $("#arrowIcondatabase").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#modalsblock").click(function () {
-                $(".modealscontent").toggle();
-                $("#arrowIconmodals").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#analyticsblock").click(function () {
-                $(".analyticscontent").toggle();
-                $("#arrowIconanalytics").toggleClass("rotated");
-              });
-            });
-          </script>
             <script>
               function myFunction() {
                   let theme = localStorage.getItem("theme");
@@ -321,42 +277,67 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
           $(document).ready(function () {
+            if ($("#rulesListItem").hasClass("active")) {
+              $(".introductionContent").show();
+            }
+
             $("#introductionBlock").click(function () {
               $(".introductionContent").toggle();
               $("#arrowIcon").toggleClass("rotated");
             });
           });
           $(document).ready(function () {
+            if ($("#guide").hasClass("active")) {
+              $(".GuideContent").show();
+            }
             $("#GUIDEBlock").click(function () {
               $(".GuideContent").toggle();
               $("#arrowIconguide").toggleClass("rotated");
             });
           });
           $(document).ready(function () {
+            if ($("#example").hasClass("active")) {
+              $(".examplecontent").show();
+            }
             $("#exampleBlock").click(function () {
+              if ($(".md-nav__item").hasClass("active")) {
+              $(".examplecontent").show();
+            }
               $(".examplecontent").toggle();
               $("#arrowIconexample").toggleClass("rotated");
             });
           });
           $(document).ready(function () {
+            if ($("#refrence").hasClass("active")) {
+              $(".REFERENCEScontent").show();
+            }
             $("#REFERENCESBlock").click(function () {
               $(".REFERENCEScontent").toggle();
               $("#arrowIconREFERENCES").toggleClass("rotated");
             });
           });
           $(document).ready(function () {
+            if ($("#database").hasClass("active")) {
+              $(".databasecontent").show();
+            }
             $("#databaseblock").click(function () {
               $(".databasecontent").toggle();
               $("#arrowIcondatabase").toggleClass("rotated");
             });
           });
           $(document).ready(function () {
+            if ($("#modal").hasClass("active")) {
+              $(".modealscontent").show();
+            }
             $("#modalsblock").click(function () {
               $(".modealscontent").toggle();
               $("#arrowIconmodals").toggleClass("rotated");
             });
           });
           $(document).ready(function () {
+            if ($("#analytics").hasClass("active")) {
+              $(".analyticscontent").show();
+            }
             $("#analyticsblock").click(function () {
               $(".analyticscontent").toggle();
               $("#arrowIconanalytics").toggleClass("rotated");
@@ -416,8 +397,8 @@
       </span>  
     
     </li>
-    <span class="introductionContent">
-    <li class="md-nav__item">
+    <ul class="introductionContent">
+      <li class="md-nav__item">
     
     
       <a href="../Guide/purpose.html" class="md-nav__link">1. Statement of Purpose</a>
@@ -438,7 +419,7 @@
       
     
     </li>
-    </span>
+  </ul>
     <li class="md-nav__item" id="GUIDEBlock">
       <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
         ><span class="caption-text">GUIDE</span>
@@ -449,7 +430,7 @@
         </span
       >
     </li>
-    <span class="GuideContent">
+    <ul class="GuideContent">
     <li class="md-nav__item">
     
     
@@ -471,7 +452,7 @@
       
     
     </li>
-    </span>
+  </ul>
     <li class="md-nav__item" id="exampleBlock">
       <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
         ><span class="caption-text">EXAMPLES</span>
@@ -482,7 +463,7 @@
         </span
       >
     </li>
-    <span class="examplecontent">
+    <ul class="examplecontent">
     <li class="md-nav__item">
     
     
@@ -538,7 +519,7 @@
       
     
     </li>
-    </span>
+  </ul>
     <li class="md-nav__item"  id="REFERENCESBlock">
       <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
         ><span class="caption-text">REFERENCES</span>
@@ -549,7 +530,7 @@
         </span
       >
     </li>
-    <span class="REFERENCEScontent">
+    <ul class="REFERENCEScontent">
     <li class="md-nav__item">
     
     
@@ -557,7 +538,7 @@
       
     
     </li>
-    </span>
+  </ul>
     <li class="md-nav__item" id="databaseblock">
       <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
         ><span class="caption-text">database/</span>
@@ -568,7 +549,7 @@
         </span
       >
     </li>
-    <span class="databasecontent">
+    <ul class="databasecontent">
     <li class="md-nav__item">
     
     
@@ -597,7 +578,7 @@
       
     
     </li>
-    </span>
+  </ul>
     <li class="md-nav__item" id="modalsblock">
       <span class="md-nav__link caption" style="display: flex;justify-content: space-between;"
         ><span class="caption-text">models/</span>

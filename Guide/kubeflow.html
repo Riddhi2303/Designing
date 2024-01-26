@@ -165,50 +165,6 @@ color: #ffffff; /* For example, set text color to white */
     <link rel="prev" title="1. CI-CD Procedures" href="ci-cd.html" />
     <script src="_static/javascripts/version_dropdown.js"></script>
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-          <script>
-            $(document).ready(function () {
-              $("#introductionBlock").click(function () {
-                $(".introductionContent").toggle();
-                $("#arrowIcon").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#GUIDEBlock").click(function () {
-                $(".GuideContent").toggle();
-                $("#arrowIconguide").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#exampleBlock").click(function () {
-                $(".examplecontent").toggle();
-                $("#arrowIconexample").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#REFERENCESBlock").click(function () {
-                $(".REFERENCEScontent").toggle();
-                $("#arrowIconREFERENCES").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#databaseblock").click(function () {
-                $(".databasecontent").toggle();
-                $("#arrowIcondatabase").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#modalsblock").click(function () {
-                $(".modealscontent").toggle();
-                $("#arrowIconmodals").toggleClass("rotated");
-              });
-            });
-            $(document).ready(function () {
-              $("#analyticsblock").click(function () {
-                $(".analyticscontent").toggle();
-                $("#arrowIconanalytics").toggleClass("rotated");
-              });
-            });
-          </script>
    
 
   </head>
@@ -465,7 +421,7 @@ color: #ffffff; /* For example, set text color to white */
         </svg>
       </span>
     </li>
-    <span class="GuideContent">
+    <ul class="GuideContent">
       <li class="md-nav__item">
         <a href="ci-cd.html" class="md-nav__link"
           >1. CI-CD Procedures</a
@@ -481,7 +437,7 @@ color: #ffffff; /* For example, set text color to white */
           >3. Platform Introduction Tutorial</a
         >
       </li>
-    </span>
+    </ul>
     <li class="md-nav__item" id="exampleBlock">
       <span
         class="md-nav__link caption"
@@ -502,7 +458,7 @@ color: #ffffff; /* For example, set text color to white */
         </svg>
       </span>
     </li>
-    <span class="examplecontent">
+    <ul class="examplecontent">
       <li class="md-nav__item">
         <a href="../Examples/notebooks.html" class="md-nav__link"
           >1. Create a Kubeflow Notebook</a
@@ -527,7 +483,7 @@ color: #ffffff; /* For example, set text color to white */
           >4. Plotting</a
         >
       </li>
-    </span>
+    </ul>
     <li class="md-nav__item" id="REFERENCESBlock">
       <span
         class="md-nav__link caption"
@@ -548,13 +504,13 @@ color: #ffffff; /* For example, set text color to white */
         </svg>
       </span>
     </li>
-    <span class="REFERENCEScontent">
+    <ul class="REFERENCEScontent">
       <li class="md-nav__item">
         <a href="../References/Mycelium.html" class="md-nav__link"
           >Mycelium.py</a
         >
       </li>
-    </span>
+    </ul>
     <li class="md-nav__item" id="databaseblock">
       <span
         class="md-nav__link caption"
@@ -575,7 +531,7 @@ color: #ffffff; /* For example, set text color to white */
         </svg>
       </span>
     </li>
-    <span class="databasecontent">
+    <ul class="databasecontent">
       <li class="md-nav__item">
         <a
           href="../References/Mycelium/Inchworm.html"
@@ -604,7 +560,7 @@ color: #ffffff; /* For example, set text color to white */
           >Crawler.py</a
         >
       </li>
-    </span>
+    </ul>
     <li class="md-nav__item" id="modalsblock">
       <span
         class="md-nav__link caption"

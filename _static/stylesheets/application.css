@@ -820,7 +820,8 @@ html .md-footer-meta.md-typeset a:focus,html .md-footer-meta.md-typeset a:hover{
     padding:0 .6rem;
     font-weight:700;
     text-overflow:ellipsis;
-    overflow:hidden
+    overflow:hidden;
+    margin-bottom: 20px;
 }
 .md-nav__title:before{
     display:none;
@@ -859,11 +860,11 @@ html .md-footer-meta.md-typeset a:focus,html .md-footer-meta.md-typeset a:hover{
 }
 .md-nav__link{
     display:block;
-    margin-top:.625em;
     transition:color .125s;
     text-overflow:ellipsis;
     cursor:pointer;
-    overflow:hidden
+    overflow:hidden;
+    padding: 5px 0;
 }
 .md-nav__item--nested>.md-nav__link:after{
     content:"\E313"
@@ -1068,7 +1069,7 @@ html .md-nav__link[for=__toc],html .md-nav__link[for=__toc]+.md-nav__link:after,
 }
 .md-sidebar{
     position:absolute;
-    width:12.1rem;
+    width:14.1rem;
     padding:1.2rem 0;
     overflow:hidden
 }
@@ -2725,7 +2726,7 @@ html .md-typeset .superfences-tabs>label:hover{
 }
 @media only screen and (min-width:76.25em){
     .md-content{
-        margin-left:12.1rem
+        margin-left:14.1rem
     }
     [dir=rtl] .md-content{
         margin-right:12.1rem
