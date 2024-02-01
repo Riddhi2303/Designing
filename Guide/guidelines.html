@@ -91,38 +91,45 @@
       });
     });
   </script>
-   <script>
+  <script>
     function myFunction() {
+        // Retrieve the current theme from local storage
         let theme = localStorage.getItem("theme");
 
+        // Toggle between light and dark themes
         if (!theme || theme === "light-mode") {
             localStorage.setItem("theme", "dark-mode");
         } else {
             localStorage.setItem("theme", "light-mode");
         }
 
+        // Apply the theme to the page
         applyTheme();
     }
 
     function applyTheme() {
+    // Retrieve the current theme from local storage
     let theme = localStorage.getItem("theme");
+    // Select elements to be themed
     var element = document.body;
     var header = document.querySelector(".md-header");
-    var title = document.getElementById("examples-notebooks--page-root");
+    var title = document.getElementById("guide-guidelines--page-root");
     var svg = document.getElementById("toggleIcon");
     var arrowIcons = document.querySelectorAll(
         "#arrowIcon, #arrowIconguide, #arrowIconexample, #arrowIconREFERENCES, #arrowIcondatabase, #arrowIconmodals, #arrowIconanalytics"
     );
 
+    // Remove the arrowdark class from all arrowIcons
     arrowIcons.forEach(function (arrowIcon) {
         arrowIcon.classList.remove("arrowdark");
     });
 
+    // Remove all theme classes before applying the updated theme
     element.classList.remove("light-mode", "dark-mode");
     header.classList.remove("light-mode", "dark-mode");
     title.classList.remove("white");
     svg.classList.remove("dark");
-
+    // Apply the current theme classes
     if (theme === "dark-mode") {
         element.classList.add("dark-mode");
         header.classList.add("dark-mode");
@@ -131,13 +138,18 @@
         arrowIcons.forEach(function (arrowIcon) {
             arrowIcon.classList.add("arrowdark");
         });
+        // svg.innerHTML = '<path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path>'; // Replace this with your actual dark mode SVG path
+
     } else {
+        // Default to light mode if the theme is not explicitly set or is set to "light-mode"
         element.classList.add("light-mode");
         header.classList.add("light-mode");
     }
 }
 
+// Apply the theme on page load
 document.addEventListener("DOMContentLoaded", function () {
+    // Check for the theme in local storage on page load
     applyTheme();
 });
 
@@ -251,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
   <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
   <a href="#Guide/guidelines" tabindex="1" class="md-skip"> Skip to content </a>
-  <header class="md-header" style="height:5.4rem"  data-md-component="header">
+    <header class="md-header" style="height: 4.8rem; border-bottom: 0.1rem solid rgb(0 0 0 / 7%)" data-md-component="header">
     <nav class="md-header-nav md-grid">
       <div class="md-flex navheader">
         <div class="md-flex__cell md-flex__cell--shrink">
@@ -344,12 +356,12 @@ document.addEventListener("DOMContentLoaded", function () {
         
       </div>
       <div class="second-header" style="padding-left: 1rem;margin-top: 25px;">
-        <span style="color:#676666; font-size: 20px; font-weight:600">GUIDE</span>
-        <span style="color:#131313; margin-left:20px; font-size: 20px; font-weight:600">APIS</span>
+        <span style="color:#676666; font-size: 16px; font-weight:600">GUIDE</span>
+        <span style="color:#131313; margin-left:20px; font-size: 16px; font-weight:600">APIS</span>
 
       </div>
     </nav>
-    <hr style="background-color: rgb(185, 180, 180);"/>
+    <!-- <hr style="background-color: rgb(185, 180, 180);"/> -->
 
   </header>
 
